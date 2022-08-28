@@ -1,1 +1,1 @@
-# CSzx
+# Journey of a developer
