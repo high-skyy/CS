@@ -1,1 +1,0 @@
-# Journey of a developer
