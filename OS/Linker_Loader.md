@@ -15,5 +15,6 @@
 > CPU는 Main memory에 있는 내용들만 가져다 사용할 수 있기 때문에 loader에 경우는 메모리에 실행 파일을 load 시켜 준다.
 
 ## References
-Book : Operating System Concepts by Abraham Silberschatz, Greg Gagne, Peter B. Galvin
 [Reference](https://ko.wikipedia.org/wiki/%EC%96%B4%EC%85%88%EB%B8%94%EB%A6%AC%EC%96%B4#:~:text=%EA%B8%B0%EA%B3%84%EC%96%B4%EB%8A%94%20%EC%8B%A4%EC%A0%9C%EB%A1%9C%20%EC%BB%B4%ED%93%A8%ED%84%B0%EC%9D%98,%ED%95%9C%20%EA%B2%83%EC%9D%B4%20%EC%96%B4%EC%85%88%EB%B8%94%EB%A6%AC%20%EC%96%B8%EC%96%B4%EC%9D%B4%EB%8B%A4.)
+
+Book : Operating System Concepts by Abraham Silberschatz, Greg Gagne, Peter B. Galvin
