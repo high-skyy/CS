@@ -1,6 +1,4 @@
-# Journey of a developer
-
-## CS knowledge
+## Language
 
 ### Broad knowledge
 
