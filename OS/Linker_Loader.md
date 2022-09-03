@@ -1,6 +1,6 @@
 # Linkers and Loaders
 
-## 도식표
+## Roles of Compiler, Linker, Loader
 ![OS_Linker_Loader](https://user-images.githubusercontent.com/105041834/188276080-dba53fb9-8dd1-409d-a8f4-c8edb60c0013.JPG)
 1. Source files are compiled into object files that are designed to be loaded into any physical memory location, a format known as an relocatable object file
 
