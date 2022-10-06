@@ -59,6 +59,7 @@ Index whose search key specifies an order different from the sequential order of
 > 정렬이 되어 있는 경우
 
 
+
 ## Reference
 - 학교 강의 자료
 - Book : Database System Concepts (Abraham Silberschatz, Henry F. Koreth etc.)
