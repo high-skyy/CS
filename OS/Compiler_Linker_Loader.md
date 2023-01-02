@@ -5,7 +5,7 @@
 
 > Compile에서 부터 실행 가능한 파일(exe 파일) 까지 만드는 과정을 Build라고 한다.
 
-1. Source files are compiled into object files that are designed to be loaded into any physical memory location, a format known as an relocatable object file
+1. Source files are compiled into object files that are designed to be loaded into any physical memory location, a format known as a relocatable object file
 
 > 해당 오브젝트 파일은 어셈블리어(기계어(0,1)와 일대일 대응이 되는 컴퓨터 프로그래밍의 저급 언어)로 되어 있다.
  
