@@ -6,7 +6,7 @@
 3. JOIN (JOIN 실행)
 4. WHERE (JOIN된 table에서 선택 / WHERE가 두 개의 table의 att에서 선택 될 수 있음.)
 5. GROUP BY (먼저 묶고)
-6. Having (GROUP BY 중 선택)
+6. HAVING (GROUP BY 중 선택)
 7. SELECT (선택)
 8. ORDER BY (순서 정하기)
 
@@ -27,13 +27,12 @@
 2. 집계 함수 이외에도 다른 함수와 함께 사용할 수 있습니다.
 3. 특정 열 내의 값 이외에도 순위, 퍼센타일 등을 가지고도 행을 합칠 수 있습니다.
 4. 기존 행에 변화를 주지 않습니다.
-5. 현재 행과 연관 있는 구간만 설정해 계싼할 수 있습니다.
+5. 현재 행과 연관 있는 구간만 설정해 계산할 수 있습니다.
 
 ## Detail
 - AS 삭제 가능.
 
-
-
 ## Reference
 - [Reference](https://myjamong.tistory.com/172)
 - [Reference](https://kimsyoung.tistory.com/entry/SQL-%EB%82%B4-%EC%A7%91%EA%B3%84-%ED%95%A8%EC%88%98-vs-%EC%9C%88%EB%8F%84%EC%9A%B0-%ED%95%A8%EC%88%98-%EC%9C%A0%EC%82%AC%EC%A0%90%EA%B3%BC-%EC%B0%A8%EC%9D%B4%EC%A0%90)
+- [Reference](https://mizykk.tistory.com/121#:~:text=%EC%9C%88%EB%8F%84%EC%9A%B0%ED%95%A8%EC%88%98%EB%8A%94%20Group%20By,%EA%B0%92%EC%9D%84%20%EC%B6%94%EA%B0%80%ED%95%98%EC%97%AC%20%EB%82%98%ED%83%80%EB%82%B8%EB%8B%A4.&text=%EC%A7%91%EA%B3%84%EB%90%9C%20%EA%B0%92%EB%A7%8C%20%EB%82%98%ED%83%80%EB%82%9C%EB%8B%A4.&text=%EA%B8%B0%EC%A1%B4%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%97%90%20%EC%A7%91%EA%B3%84%EB%90%9C%20%EA%B0%92%EC%9D%B4%20%EC%B6%94%EA%B0%80%EB%90%98%EC%96%B4%20%EB%82%98%ED%83%80%EB%82%9C%EB%8B%A4.)
