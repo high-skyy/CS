@@ -14,6 +14,14 @@ FROM 테이블 명;
 - ORDER BY : 어떤 항목에 대해서 정렬한다.
 - WINDOWING : 행 기준 범위를 정한다. (Row 또는 RANGE WHERE 역할)
 
+### WINDOWING
+- ROWS : 부분집합인 window 크기를 물리적 단위로 행의 집합을 지정한다.
+- RANGE : 논리적 주소에 의해 행 집합을 지정한다.
+- BETWEEN~AND : 윈도우의 시작과 끝 위치를 지정한다.
+- UNBOUNDED PRECEDING : 윈도우 시작 위치가 첫 번째 행 임을 의미한다.
+- UNBOUNDED FOLLOWING : 윈도우 마지막 위치가 마지막 행임을 의미한다.
+- CURRENT ROW : 윈도우 시작 위치가 현재 행임을 의미한다.
+
 ## Window Function 종류
 
 ![Window 함수 예시](https://user-images.githubusercontent.com/105041834/210501493-88922215-1eaf-4fd3-9702-a4ae43f836ea.jpg)
