@@ -8,11 +8,12 @@ Behind the scenes, the window function is able to access more than just the curr
 > Aggregate function 과의 주된 차이 점은 window function 의 경우 row 들이 한 개의 output row
 > 로 group 되지 않는 다는 점이다.
 
-## Window Funciton 기본 문법
+## Window Function 기본 문법
 ```
 SELECT WINDOW_FUNCTION (ARGUMENTS) OVER ([PARTITION BY 칼럼] [ORDER BY 칼럼] [WINDOWING 절] )
 FROM 테이블 명;
 ```
+> OVER 문구가 필수적으로 들어간다.
 
 - Arguments : 윈도우 함수에 따라서 0~N개의 인수를 설정한다.
 - Partition BY : 전체 집합을 기준에 의해 소그룹으로 나눈다. (Group by 역할)
@@ -57,12 +58,41 @@ SELECT start_terminal,
 
 ![Window 함수 예시](https://user-images.githubusercontent.com/105041834/210501493-88922215-1eaf-4fd3-9702-a4ae43f836ea.jpg)
 
-### Ranking Function
-- row_number() : 일렬 번호
-  - window partition 내의 행의 순서에 따라 한 행부터 시작하여 각 행에 대해 고유한 일렬 번호를 반환합니다.
+- 그룹 내 순위(RANK) 관련 함수 : RANK, DENSE_RANK, ROW_NUMBER
+- 그룹 내 집계(Aggregate) 관련 함수 : SUM, MAX, MIN, AVG, COUNT
+- 그룹 내 행 순서 관련 함수 : FIRST_VALUE, LAST_VALUE, LAG, LEAD (Oracle 에서만 지원)
+- 그룹 내 비율 관련 함수 : CUME_DIST, PERCENT_RANK, NTILE, RATIO_TO_REPORT
+- 선형 분석을 포함한 통계 분석 함수
+
+### Basic Function Example
+#### RANK
+- 순위를 구하는 함수
+- 특정 범위(PARTITION) 내에서 순위를 구할 수도 있고, 전체 데이터에 대한 순위를 구할 수도 있다.
+- 동일한 값에 대해서는 동일한 순위를 부여하게 된다.
+
+> 사원 데이터에서 급여가 높은 순서와 JOB 별로 급여가 높은 순서를 출력하는 예제
+```
+SELECT   JOB, ENAME, SAL,
+         RANK() OVER (ORDER BY SAL DESC) AS ALL_RANK,  -- 급여 높은 순
+         RANK() OVER (PARTITION BY JOB ORDER BY SAL DESC) AS JOB_RANK -- job 별로 급여 높은 순
+FROM     EMP ;    
+```
+
+#### DENSE_RANK
+- RANK 와 흡사하지만, 동일한 순위를 하나의 건수로 취급한다.
+- RANK는 1,2,3 순위로 표기하지만, DENSE_RANK는 1,1,3 순위를 부여한다.
+
+```
+SELECT   JOB, ENAME, SAL,
+         RANK()       OVER (ORDER BY SAL DESC) ALL_RANK,  
+         DENSE_RANK() OVER (ORDER BY SAL DESC) DENSE_RANK 
+FROM     EMP ; 
+```
+
 
 ## Reference
 - [Reference](https://for-my-wealthy-life.tistory.com/48)
 - [Reference](https://velog.io/@yewon-july/Window-Function)
 - [Reference](https://velog.io/@ena_hong/SQL-Analytic-Function-%EB%B6%84%EC%84%9D%ED%95%A8%EC%88%98)
 - [Reference](https://mode.com/sql-tutorial/sql-window-functions/)
+- [Reference](https://moonpiechoi.tistory.com/128)
